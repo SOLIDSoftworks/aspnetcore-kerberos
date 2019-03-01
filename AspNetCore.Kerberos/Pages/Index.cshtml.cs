@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AspNetCore.Kerberos.Pages
 {
-    [Authorize]
     public class IndexModel : PageModel
     {
         public void OnGet()
