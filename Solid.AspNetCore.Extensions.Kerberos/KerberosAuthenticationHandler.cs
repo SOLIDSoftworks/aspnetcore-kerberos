@@ -33,7 +33,7 @@ namespace Solid.AspNetCore.Extensions.Kerberos
 
             var authenticator = CreateAuthenticator();
 
-            // Kerberos.NET supports sending the ticked with the Negotiate prefix, so we don't need to do any string manipulation
+            // Kerberos.NET supports sending the ticket with the Negotiate prefix, so we don't need to do any string manipulation
             var identity = await authenticator.Authenticate(authorization);
             var principal = new ClaimsPrincipal(identity);
             var ticket = new AuthenticationTicket(principal, Scheme.Name);
